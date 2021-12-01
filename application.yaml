@@ -7,20 +7,12 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: https://github.com/paul182/argocd.git
     targetRevision: HEAD
     path: dev
   destination: 
     server: https://kubernetes.default.svc
     namespace: argo-dev
-
-  source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
-    targetRevision: HEAD
-    path: stage
-  destination: 
-    server: https://kubernetes.default.svc
-    namespace: argo-stage
 
   syncPolicy:
     syncOptions:
